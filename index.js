@@ -15,14 +15,14 @@ let myServer = myhttp.createServer(
 
     let newText;
     if ( myrequest.url === "/hey" ) {
-      revisedText = "Well this text should change";
+      myText = "Well this text should change";
     } else {
-      firstText = "This is the first text, add backslash hey to URL!";
+      myText = "This is the first text, add \\backslash hey to URL!";
     }
     // writeHead() creates an http response header, including the status code (200 OK), the content type
     myresponse.writeHead( 200, { "Content-Type": "text/plain" } );
 
-    myresponse.end( newText );
+    myresponse.end( myText );
   }
 );
 
