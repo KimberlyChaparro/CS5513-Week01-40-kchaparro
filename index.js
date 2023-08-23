@@ -15,9 +15,9 @@ let myServer = myhttp.createServer(
 
     let newText;
     if ( myrequest.url === "/hey" ) {
-      myText = "Well this text should change";
+      myText = "You see? This text just changed";
     } else {
-      myText = "This is the first text, add \\backslash hey to URL!";
+      myText = "This is the first text, add /hey to end of URL!";
     }
     // writeHead() creates an http response header, including the status code (200 OK), the content type
     myresponse.writeHead( 200, { "Content-Type": "text/plain" } );
