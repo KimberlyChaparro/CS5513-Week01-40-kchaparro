@@ -9,20 +9,20 @@ let myhttp = require('http');
 // createServer() takes some arguments to make it provide a useful http server
 // 1: function (block of code) that will be run whenever the server receives an http request
 
-let myserver = myhttp.createServer(
+let myServer = myhttp.createServer(
   function( myrequest, myresponse ) {
     console.log( myrequest.url );
 
-    let mytext;
+    let newText;
     if ( myrequest.url === "/hey" ) {
-      mytext = "Well hello there friend...";
+      revisedText = "Well this text should change";
     } else {
-      mytext = "I don't know you!";
+      firstText = "This is the first text, add /hey!";
     }
     // writeHead() creates an http response header, including the status code (200 OK), the content type
     myresponse.writeHead( 200, { "Content-Type": "text/plain" } );
 
-    myresponse.end( mytext );
+    myresponse.end( newText );
   }
 );
 
