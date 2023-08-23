@@ -29,6 +29,6 @@ let myServer = myhttp.createServer(
 // ask http to start listening on a tcp port for incoming http requests
 
 // listen() takes 2 args: 1: tcp port #, 2: string of the ip address to listen (0.0.0.0)
-myserver.listen(8080, "0.0.0.0");
+myServer.listen(8080, "0.0.0.0");
 
 console.log("server has started");
